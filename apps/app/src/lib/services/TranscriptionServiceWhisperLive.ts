@@ -52,10 +52,10 @@ export const TranscriptionServiceWhisperLive = Layer.succeed(
 				);
 				const formData = new FormData();
 				formData.append('file', formDataFile);
-				formData.append('model', 'whisper-1');
+				formData.append('model', 'FunAudioLLM/SenseVoiceSmall');
 				if (outputLanguage !== 'auto') formData.append('language', outputLanguage);
 				const data = yield* HttpClientRequest.post(
-					'https://api.openai.com/v1/audio/transcriptions',
+					'https://api.siliconflow.cn/v1/audio/transcriptions',
 				).pipe(
 					HttpClientRequest.setHeaders({ Authorization: `Bearer ${apiKey}` }),
 					HttpClientRequest.formDataBody(formData),
