@@ -30,7 +30,6 @@
 					"url": "https://*"
 				}
 			]
-		},
-		"updater:default"
+		}
 	]
 }
